@@ -1,0 +1,17 @@
+import random
+def finder(wantedValue, data):
+    for i in range(len(data)):
+        if (data[i][i] == wantedValue):
+            #TEMP
+            #return i
+            print(i)
+            break
+    else:
+        #TEMP
+        #return null
+        print("Value not found!")
+def tester(testValue = int(input("Test value: "))):
+    data = [[random.randint(0, 2) for i in range(10)] for j in range(10)]
+    data[random.randint(0, len(data) - 1)][random.randint(0, len(data) - 1)] = testValue
+    finder(testValue, data)
+tester()
